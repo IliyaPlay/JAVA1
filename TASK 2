@@ -1,1 +1,25 @@
+import java.util.Scanner;
 
+public class Main {
+
+    public static boolean ifStringPalindrom(String a){
+        StringBuilder st = new StringBuilder(a);
+        st.reverse();
+        String stReverse = st.toString();
+        if (a.equals(stReverse)) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите строку: ");
+        String s = scan.nextLine();
+        System.out.println(ifStringPalindrom(s));
+    }
+
+}
