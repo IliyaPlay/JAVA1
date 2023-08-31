@@ -1,0 +1,10 @@
+SELECT surname
+FROM Employee
+WHERE experience = (
+    SELECT MAX(experience)
+    FROM Employee
+    WHERE experience < (
+        SELECT MAX(experience)
+        FROM Employee
+    )
+);
